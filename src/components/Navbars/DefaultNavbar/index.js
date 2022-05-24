@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-param-reassign */
 import { Fragment, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
@@ -15,6 +16,8 @@ import MKButton from "components/MKButton";
 import DefaultNavbarDropdown from "components/Navbars/DefaultNavbar/DefaultNavbarDropdown";
 import DefaultNavbarMobile from "components/Navbars/DefaultNavbar/DefaultNavbarMobile";
 import breakpoints from "assets/theme/base/breakpoints";
+import logo from "assets/images/main-logo/logo.jpeg";
+import MKAvatar from "components/MKAvatar";
 
 function DefaultNavbar({ brand, routes, transparent, light, action, sticky, relative, center }) {
   const [dropdown, setDropdown] = useState("");
@@ -447,7 +450,7 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
             pl={relative || transparent ? 0 : { xs: 0, lg: 1 }}
           >
             <MKTypography variant="button" fontWeight="bold" color={light ? "white" : "dark"}>
-              {brand}
+              <MKAvatar src={logo} alt="team 1" size="md" />
             </MKTypography>
           </MKBox>
           <MKBox
@@ -521,7 +524,7 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
 
 // Setting default values for the props of DefaultNavbar
 DefaultNavbar.defaultProps = {
-  brand: "향원-향과 사람이 머무는곳",
+  brand: "",
   transparent: false,
   light: false,
   action: false,
