@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.js": "/hwangwon/static/js/main.535a3563.js",
+    "main.js": "/hwangwon/static/js/main.d2fd2ada.js",
     "static/media/bg-main.jpeg": "/hwangwon/static/media/bg-main.1770429afe6f56fa5a24.jpeg",
+    "static/media/logo.jpeg": "/hwangwon/static/media/logo.aa8a813fd050e245140b.jpeg",
     "static/media/bg-main-info.jpeg": "/hwangwon/static/media/bg-main-info.d4abe9fc870018593cbd.jpeg",
     "static/media/bruce-mars.jpg": "/hwangwon/static/media/bruce-mars.8a606c4a6dab54c9ceff.jpg",
     "static/media/team-5.jpg": "/hwangwon/static/media/team-5.d59ab7b9f95f1169cf83.jpg",
     "static/media/ivana-square.jpg": "/hwangwon/static/media/ivana-square.f7bc23b269d1d2509c82.jpg",
     "static/media/ivana-squares.jpg": "/hwangwon/static/media/ivana-squares.3c555b856b04c2ab921b.jpg",
     "index.html": "/hwangwon/index.html",
-    "main.535a3563.js.map": "/hwangwon/static/js/main.535a3563.js.map"
+    "main.d2fd2ada.js.map": "/hwangwon/static/js/main.d2fd2ada.js.map"
   },
   "entrypoints": [
-    "static/js/main.535a3563.js"
+    "static/js/main.d2fd2ada.js"
   ]
 }
