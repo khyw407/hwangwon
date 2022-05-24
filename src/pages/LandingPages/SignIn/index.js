@@ -1,11 +1,8 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import Card from "@mui/material/Card";
-import Switch from "@mui/material/Switch";
 import Grid from "@mui/material/Grid";
 import MuiLink from "@mui/material/Link";
 import FacebookIcon from "@mui/icons-material/Facebook";
-import GitHubIcon from "@mui/icons-material/GitHub";
 import GoogleIcon from "@mui/icons-material/Google";
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
@@ -14,13 +11,9 @@ import MKButton from "components/MKButton";
 import DefaultNavbar from "components/Navbars/DefaultNavbar";
 import SimpleFooter from "components/Footers/SimpleFooter";
 import routes from "routes";
-import bgImage from "assets/images/bg-sign-in-basic.jpeg";
+import bgImage from "assets/images/bg-signin.jpeg";
 
 function SignInBasic() {
-  const [rememberMe, setRememberMe] = useState(false);
-
-  const handleSetRememberMe = () => setRememberMe(!rememberMe);
-
   return (
     <>
       <DefaultNavbar routes={routes} transparent light />
@@ -68,11 +61,6 @@ function SignInBasic() {
                   </Grid>
                   <Grid item xs={2}>
                     <MKTypography component={MuiLink} href="#" variant="body1" color="white">
-                      <GitHubIcon color="inherit" />
-                    </MKTypography>
-                  </Grid>
-                  <Grid item xs={2}>
-                    <MKTypography component={MuiLink} href="#" variant="body1" color="white">
                       <GoogleIcon color="inherit" />
                     </MKTypography>
                   </Grid>
@@ -85,18 +73,6 @@ function SignInBasic() {
                   </MKBox>
                   <MKBox mb={2}>
                     <MKInput type="password" label="Password" fullWidth />
-                  </MKBox>
-                  <MKBox display="flex" alignItems="center" ml={-1}>
-                    <Switch checked={rememberMe} onChange={handleSetRememberMe} />
-                    <MKTypography
-                      variant="button"
-                      fontWeight="regular"
-                      color="text"
-                      onClick={handleSetRememberMe}
-                      sx={{ cursor: "pointer", userSelect: "none", ml: -1 }}
-                    >
-                      &nbsp;&nbsp;Remember me
-                    </MKTypography>
                   </MKBox>
                   <MKBox mt={4} mb={1}>
                     <MKButton variant="gradient" color="info" fullWidth>

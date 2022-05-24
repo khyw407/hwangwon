@@ -1,5 +1,5 @@
-import firebase from 'firebase/compat/app';
-import { getAnalytics } from 'firebase/analytics';
+import firebase from "firebase/compat/app";
+import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,

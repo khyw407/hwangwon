@@ -19,6 +19,7 @@ import ProgressBars from "layouts/sections/elements/progress-bars";
 import Toggles from "layouts/sections/elements/toggles";
 import Typography from "layouts/sections/elements/typography";
 */
+import SignIn from "pages/LandingPages/SignIn";
 
 const routes = [
   {
@@ -164,8 +165,9 @@ const routes = [
   },
   {
     name: "Login",
-    icon: <Icon>view_day</Icon>,
+    icon: <Icon>login</Icon>,
     route: "/login",
+    component: <SignIn />,
   },
 ];
 
