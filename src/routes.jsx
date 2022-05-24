@@ -1,4 +1,5 @@
 import Icon from "@mui/material/Icon";
+/*
 import PageHeaders from "layouts/sections/page-sections/page-headers";
 import Features from "layouts/sections/page-sections/featuers";
 import Navbars from "layouts/sections/navigation/navbars";
@@ -17,6 +18,7 @@ import Dropdowns from "layouts/sections/elements/dropdowns";
 import ProgressBars from "layouts/sections/elements/progress-bars";
 import Toggles from "layouts/sections/elements/toggles";
 import Typography from "layouts/sections/elements/typography";
+*/
 
 const routes = [
   {
@@ -27,6 +29,7 @@ const routes = [
         name: "page sections",
         description: "See all sections",
         dropdown: true,
+        /*
         collapse: [
           {
             name: "page headers",
@@ -39,11 +42,13 @@ const routes = [
             component: <Features />,
           },
         ],
+        */
       },
       {
         name: "navigation",
         description: "See all navigations",
         dropdown: true,
+        /*
         collapse: [
           {
             name: "navbars",
@@ -61,11 +66,13 @@ const routes = [
             component: <Pagination />,
           },
         ],
+        */
       },
       {
         name: "input areas",
         description: "See all input areas",
         dropdown: true,
+        /*
         collapse: [
           {
             name: "inputs",
@@ -78,11 +85,13 @@ const routes = [
             component: <Forms />,
           },
         ],
+        */
       },
       {
         name: "attention catchers",
         description: "See all components",
         dropdown: true,
+        /*
         collapse: [
           {
             name: "alerts",
@@ -100,11 +109,13 @@ const routes = [
             component: <TooltipsPopovers />,
           },
         ],
+        */
       },
       {
         name: "elements",
         description: "See all 32 components",
         dropdown: true,
+        /*
         collapse: [
           {
             name: "avatars",
@@ -147,6 +158,7 @@ const routes = [
             component: <Typography />,
           },
         ],
+        */
       },
     ],
   },

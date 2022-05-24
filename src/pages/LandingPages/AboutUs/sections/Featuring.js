@@ -10,27 +10,26 @@ function Featuring() {
         <Grid container justifyContent="center" sx={{ textAlign: "center" }}>
           <Grid item xs={12} md={3}>
             <DefaultCounterCard
-              count={5234}
+              count={1000}
               separator=","
-              title="Projects"
-              description="Of “high-performing” level are led by a certified project manager"
+              title="음료"
+              description="음료종료가 엄청 많아요"
             />
           </Grid>
           <Grid item xs={12} md={3}>
             <DefaultCounterCard
-              count={3400}
-              separator=","
+              count={10}
               suffix="+"
-              title="Hours"
-              description="That meets quality standards required by our users"
+              title="베이커리"
+              description="빵종류 개많음ㅋㅋ"
             />
           </Grid>
           <Grid item xs={12} md={3}>
             <DefaultCounterCard
-              count={24}
-              suffix="/7"
-              title="Support"
-              description="Actively engage team members that finishes on time"
+              count={9}
+              suffix="-18"
+              title="운영시간"
+              description="카페는 칼퇴가 제맛이지"
             />
           </Grid>
         </Grid>
