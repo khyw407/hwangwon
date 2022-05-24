@@ -1,28 +1,9 @@
-/*
-=========================================================
-* Material Kit 2 React - v2.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-kit-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
-// @mui material components
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-
-// Material Kit 2 React components
 import MKBox from "components/MKBox";
-
-// Material Kit 2 React components
 import DefaultInfoCard from "components/Cards/InfoCards/DefaultInfoCard";
 import CenteredBlogCard from "components/Cards/BlogCards/CenteredBlogCard";
+import bgInfoImage from "assets/images/bg-main-info.jpeg";
 
 function Information() {
   return (
@@ -35,8 +16,8 @@ function Information() {
                 <MKBox mb={5}>
                   <DefaultInfoCard
                     icon="public"
-                    title="Fully integrated"
-                    description="We get insulted by others, lose trust for those We get back freezes"
+                    title="신선한 원두"
+                    description="매일 로스팅한 신선한 원두"
                   />
                 </MKBox>
               </Grid>
@@ -44,8 +25,8 @@ function Information() {
                 <MKBox mb={5}>
                   <DefaultInfoCard
                     icon="payments"
-                    title="Payments functionality"
-                    description="We get insulted by others, lose trust for those We get back freezes"
+                    title="건강"
+                    description="천연 재료만을 사용한 베이커리 메뉴"
                   />
                 </MKBox>
               </Grid>
@@ -53,8 +34,8 @@ function Information() {
                 <MKBox mb={{ xs: 5, md: 0 }}>
                   <DefaultInfoCard
                     icon="apps"
-                    title="Prebuilt components"
-                    description="We get insulted by others, lose trust for those We get back freezes"
+                    title="합리적인 가격"
+                    description="저렴해요 그러니까 좀 사먹어 개개기들아"
                   />
                 </MKBox>
               </Grid>
@@ -62,8 +43,8 @@ function Information() {
                 <MKBox mb={{ xs: 5, md: 0 }}>
                   <DefaultInfoCard
                     icon="3p"
-                    title="Improved platform"
-                    description="We get insulted by others, lose trust for those We get back freezes"
+                    title="노시니어존"
+                    description="만 60세 이상 입구밴이요"
                   />
                 </MKBox>
               </Grid>
@@ -71,14 +52,14 @@ function Information() {
           </Grid>
           <Grid item xs={12} lg={4} sx={{ ml: "auto", mt: { xs: 3, lg: 0 } }}>
             <CenteredBlogCard
-              image="https://images.unsplash.com/photo-1544717302-de2939b7ef71?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
-              title="Get insights on Search"
-              description="Website visitors today demand a frictionless user expericence — especially when using search. Because of the hight standards."
+              image={bgInfoImage}
+              title="다양한 메뉴를 확인하세요"
+              description="진하게 로스팅된 원두의 맛과 좋은 재료만을 사용한 베이커리 메뉴를 만나보세요."
               action={{
                 type: "internal",
                 route: "pages/company/about-us",
                 color: "info",
-                label: "find out more",
+                label: "click",
               }}
             />
           </Grid>

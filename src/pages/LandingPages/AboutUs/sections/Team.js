@@ -1,30 +1,8 @@
-/*
-=========================================================
-* Material Kit 2 React - v2.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-kit-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
-// @mui material components
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-
-// Material Kit 2 React components
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
-
-// Material Kit 2 React components
 import HorizontalTeamCard from "components/Cards/TeamCards/HorizontalTeamCard";
-
-// Images
 import team1 from "assets/images/team-5.jpg";
 import team2 from "assets/images/bruce-mars.jpg";
 import team3 from "assets/images/ivana-squares.jpg";
@@ -45,11 +23,10 @@ function Team() {
         <Grid container>
           <Grid item xs={12} md={8} sx={{ mb: 6 }}>
             <MKTypography variant="h3" color="white">
-              The Executive Team
+              Crew
             </MKTypography>
             <MKTypography variant="body2" color="white" opacity={0.8}>
-              There&apos;s nothing I really wanted to do in life that I wasn&apos;t able to get good
-              at. That&apos;s my skill.
+              고객님들께 만족감을 선사할 향원 크루입니다.
             </MKTypography>
           </Grid>
         </Grid>
@@ -58,9 +35,9 @@ function Team() {
             <MKBox mb={1}>
               <HorizontalTeamCard
                 image={team1}
-                name="Emma Roberts"
-                position={{ color: "info", label: "UI Designer" }}
-                description="Artist is a term applied to a person who engages in an activity deemed to be an art."
+                name="1"
+                position={{ color: "info", label: "노가다1" }}
+                description="컴플레인 따윈 받지 않습니다. 손님 맞을래요?"
               />
             </MKBox>
           </Grid>
@@ -68,9 +45,9 @@ function Team() {
             <MKBox mb={1}>
               <HorizontalTeamCard
                 image={team2}
-                name="William Pearce"
-                position={{ color: "info", label: "Boss" }}
-                description="Artist is a term applied to a person who engages in an activity deemed to be an art."
+                name="2"
+                position={{ color: "info", label: "노가다2" }}
+                description="컴플레인 따윈 받지 않습니다. 손님 맞을래요?"
               />
             </MKBox>
           </Grid>
@@ -78,9 +55,9 @@ function Team() {
             <MKBox mb={{ xs: 1, lg: 0 }}>
               <HorizontalTeamCard
                 image={team3}
-                name="Ivana Flow"
-                position={{ color: "info", label: "Athlete" }}
-                description="Artist is a term applied to a person who engages in an activity deemed to be an art."
+                name="3"
+                position={{ color: "info", label: "노가다3" }}
+                description="컴플레인 따윈 받지 않습니다. 손님 맞을래요?"
               />
             </MKBox>
           </Grid>
@@ -88,9 +65,9 @@ function Team() {
             <MKBox mb={{ xs: 1, lg: 0 }}>
               <HorizontalTeamCard
                 image={team4}
-                name="Marquez Garcia"
-                position={{ color: "info", label: "JS Developer" }}
-                description="Artist is a term applied to a person who engages in an activity deemed to be an art."
+                name="4"
+                position={{ color: "info", label: "노가다4" }}
+                description="컴플레인 따윈 받지 않습니다. 손님 맞을래요?"
               />
             </MKBox>
           </Grid>

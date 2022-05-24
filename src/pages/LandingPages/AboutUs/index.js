@@ -9,10 +9,9 @@ import DefaultFooter from "components/Footers/DefaultFooter";
 import Information from "pages/LandingPages/AboutUs/sections/Information";
 import Team from "pages/LandingPages/AboutUs/sections/Team";
 import Featuring from "pages/LandingPages/AboutUs/sections/Featuring";
-import Newsletter from "pages/LandingPages/AboutUs/sections/Newsletter";
 import routes from "routes";
 import footerRoutes from "footer.routes";
-import bgImage from "assets/images/bg-about-us.jpg";
+import bgImage from "assets/images/bg-main.jpeg";
 
 function AboutUs() {
   return (
@@ -53,11 +52,10 @@ function AboutUs() {
                 },
               })}
             >
-              Work with an amazing design
+              Forget love, Fall in coffee
             </MKTypography>
             <MKTypography variant="body1" color="white" opacity={0.8} mt={1} mb={3}>
-              We&apos;re constantly trying to express ourselves and actualize our dreams. If you
-              have the opportunity to play this game
+              향과 사람이 머무는 곳에서 당신을 기다리고 있습니다
             </MKTypography>
             <MKButton color="default" sx={{ color: ({ palette: { dark } }) => dark.main }}>
               create account
@@ -66,17 +64,32 @@ function AboutUs() {
               Find us on
             </MKTypography>
             <MKBox display="flex" justifyContent="center" alignItems="center">
-              <MKTypography component="a" variant="body1" color="white" href="#" mr={3}>
+              <MKTypography
+                component="a"
+                variant="body1"
+                color="white"
+                href="https://facebook.com"
+                mr={5}
+              >
                 <i className="fab fa-facebook" />
               </MKTypography>
-              <MKTypography component="a" variant="body1" color="white" href="#" mr={3}>
+              <MKTypography
+                component="a"
+                variant="body1"
+                color="white"
+                href="https://instagram.com"
+                mr={5}
+              >
                 <i className="fab fa-instagram" />
               </MKTypography>
-              <MKTypography component="a" variant="body1" color="white" href="#" mr={3}>
+              <MKTypography
+                component="a"
+                variant="body1"
+                color="white"
+                href="https://twitter.com"
+                mr={0}
+              >
                 <i className="fab fa-twitter" />
-              </MKTypography>
-              <MKTypography component="a" variant="body1" color="white" href="#">
-                <i className="fab fa-google-plus" />
               </MKTypography>
             </MKBox>
           </Grid>
@@ -94,7 +107,6 @@ function AboutUs() {
         <Information />
         <Team />
         <Featuring />
-        <Newsletter />
       </Card>
       <MKBox pt={6} px={1} mt={6}>
         <DefaultFooter content={footerRoutes} />

@@ -521,7 +521,7 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
 
 // Setting default values for the props of DefaultNavbar
 DefaultNavbar.defaultProps = {
-  brand: "Hwangwon",
+  brand: "향원-향과 사람이 머무는곳",
   transparent: false,
   light: false,
   action: false,
