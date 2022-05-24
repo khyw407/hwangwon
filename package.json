@@ -1,30 +1,45 @@
 {
+  "homepage": "https://khyw407.github.io/hwangwon",
   "name": "hwangwon",
   "version": "0.1.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/creativetimofficial/ct-material-kit-react.git"
+  },
   "dependencies": {
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@mui/icons-material": "^5.8.0",
+    "@mui/material": "^5.8.0",
+    "@mui/styled-engine": "^5.8.0",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
     "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.1",
-    "@types/node": "^16.11.36",
-    "@types/react": "^18.0.9",
-    "@types/react-dom": "^18.0.4",
     "axios": "^0.27.2",
     "axios-mock-adapter": "^1.20.0",
+    "chroma-js": "^2.4.2",
+    "dayjs": "^1.11.2",
     "firebase": "^9.8.1",
+    "flatpickr": "^4.6.13",
     "gh-pages": "^4.0.0",
+    "prop-types": "^15.8.1",
     "react": "^18.1.0",
+    "react-copy-to-clipboard": "^5.1.0",
+    "react-countup": "^6.2.0",
     "react-dom": "^18.1.0",
+    "react-flatpickr": "^3.10.12",
+    "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
-    "typescript": "^4.6.4",
+    "react-syntax-highlighter": "^15.5.0",
     "uuid": "^8.3.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "install:clean": "rm -rf node_modules/ && yarn install && yarn start"
   },
   "eslintConfig": {
     "extends": [
@@ -53,9 +68,6 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.30.0",
     "eslint-plugin-react-hooks": "^4.5.0",
-    "prettier": "^2.6.2",
-    "rimraf": "^3.0.2",
-    "ts-node": "^10.8.0",
-    "tsc-watch": "^5.0.3"
+    "prettier": "^2.6.2"
   }
 }
