@@ -1,10 +1,7 @@
-// @mui material components
 import Icon from "@mui/material/Icon";
 
-// @mui icons
 import GitHubIcon from "@mui/icons-material/GitHub";
 
-// Pages
 import AboutUs from "layouts/pages/landing-pages/about-us";
 import ContactUs from "layouts/pages/landing-pages/contact-us";
 import Author from "layouts/pages/landing-pages/author";
