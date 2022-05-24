@@ -1,19 +1,11 @@
 import PropTypes from "prop-types";
-
-// @mui material components
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-
-// Material Kit 2 React components
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
-
-// Material Kit 2 React components
 import DefaultNavbar from "components/Navbars/DefaultNavbar";
 import CenteredFooter from "components/Footers/CenteredFooter";
 import Breadcrumbs from "components/Breadcrumbs";
-
-// Routes
 import routes from "routes";
 
 function BaseLayout({ breadcrumb, title, children }) {
@@ -52,6 +44,7 @@ function BaseLayout({ breadcrumb, title, children }) {
 
 // Typechecking props for the BaseLayout
 BaseLayout.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
   breadcrumb: PropTypes.arrayOf(PropTypes.object).isRequired,
   title: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
