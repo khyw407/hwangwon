@@ -4,6 +4,7 @@ import Grid from "@mui/material/Grid";
 import MuiLink from "@mui/material/Link";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import GoogleIcon from "@mui/icons-material/Google";
+import TwitterIcon from "@mui/icons-material/Twitter";
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 import MKInput from "components/MKInput";
@@ -53,6 +54,9 @@ function SignInBasic() {
                 <MKTypography variant="h4" fontWeight="medium" color="white" mt={1}>
                   Sign in
                 </MKTypography>
+                <MKTypography variant="caption" fontWeight={false} color="white">
+                  Enter your email and password to Sign In
+                </MKTypography>
                 <Grid container spacing={3} justifyContent="center" sx={{ mt: 1, mb: 2 }}>
                   <Grid item xs={2}>
                     <MKTypography component={MuiLink} href="#" variant="body1" color="white">
@@ -62,6 +66,11 @@ function SignInBasic() {
                   <Grid item xs={2}>
                     <MKTypography component={MuiLink} href="#" variant="body1" color="white">
                       <GoogleIcon color="inherit" />
+                    </MKTypography>
+                  </Grid>
+                  <Grid item xs={2}>
+                    <MKTypography component={MuiLink} href="#" variant="body1" color="white">
+                      <TwitterIcon color="inherit" />
                     </MKTypography>
                   </Grid>
                 </Grid>
@@ -84,7 +93,7 @@ function SignInBasic() {
                       Don&apos;t have an account?{" "}
                       <MKTypography
                         component={Link}
-                        to="/authentication/sign-up/cover"
+                        to="/register"
                         variant="button"
                         color="info"
                         fontWeight="medium"

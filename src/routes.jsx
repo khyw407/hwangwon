@@ -20,6 +20,7 @@ import Toggles from "layouts/sections/elements/toggles";
 import Typography from "layouts/sections/elements/typography";
 */
 import SignIn from "pages/LandingPages/SignIn";
+import SignUp from "pages/LandingPages/SignUp";
 
 const routes = [
   {
@@ -168,6 +169,12 @@ const routes = [
     icon: <Icon>login</Icon>,
     route: "/login",
     component: <SignIn />,
+  },
+  {
+    name: "Sign up",
+    icon: <Icon>login</Icon>,
+    route: "/register",
+    component: <SignUp />,
   },
 ];
 
