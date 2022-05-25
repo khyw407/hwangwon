@@ -3,10 +3,9 @@ import MKBox from "components/MKBox";
 import DefaultNavbar from "components/Navbars/DefaultNavbar";
 import Profile from "pages/LandingPages/Menu/sections/Profile";
 import Posts from "pages/LandingPages/Menu/sections/Posts";
-import Contact from "pages/LandingPages/Menu/sections/Contact";
-import Footer from "pages/LandingPages/Menu/sections/Footer";
+import SimpleFooter from "components/Footers/SimpleFooter";
 import routes from "routes";
-import bgImage from "assets/images/city-profile.jpg";
+import bgImage from "assets/images/bg-menu.jpeg";
 
 function Author() {
   return (
@@ -42,8 +41,9 @@ function Author() {
           <Profile />
           <Posts />
         </Card>
-        <Contact />
-        <Footer />
+      </MKBox>
+      <MKBox width="100%" position="absolute">
+        <SimpleFooter />
       </MKBox>
     </>
   );
