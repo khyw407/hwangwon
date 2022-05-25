@@ -1,10 +1,10 @@
 import Card from "@mui/material/Card";
 import MKBox from "components/MKBox";
 import DefaultNavbar from "components/Navbars/DefaultNavbar";
-import Profile from "pages/LandingPages/Author/sections/Profile";
-import Posts from "pages/LandingPages/Author/sections/Posts";
-import Contact from "pages/LandingPages/Author/sections/Contact";
-import Footer from "pages/LandingPages/Author/sections/Footer";
+import Profile from "pages/LandingPages/Menu/sections/Profile";
+import Posts from "pages/LandingPages/Menu/sections/Posts";
+import Contact from "pages/LandingPages/Menu/sections/Contact";
+import Footer from "pages/LandingPages/Menu/sections/Footer";
 import routes from "routes";
 import bgImage from "assets/images/city-profile.jpg";
 

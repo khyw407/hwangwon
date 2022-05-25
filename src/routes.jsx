@@ -22,6 +22,7 @@ import Typography from "layouts/sections/elements/typography";
 import SignIn from "pages/LandingPages/SignIn";
 import SignUp from "pages/LandingPages/SignUp";
 import Contact from "pages/LandingPages/ContactUs";
+import Menu from "pages/LandingPages/Menu";
 
 const routes = [
   {
@@ -182,6 +183,12 @@ const routes = [
     icon: <Icon>login</Icon>,
     route: "/contact",
     component: <Contact />,
+  },
+  {
+    name: "menu",
+    icon: <Icon>login</Icon>,
+    route: "/menu",
+    component: <Menu />,
   },
 ];
 

@@ -6,9 +6,9 @@ import MKTypography from "components/MKTypography";
 import MKButton from "components/MKButton";
 import DefaultNavbar from "components/Navbars/DefaultNavbar";
 import DefaultFooter from "components/Footers/DefaultFooter";
-import Information from "pages/LandingPages/AboutUs/sections/Information";
-import Team from "pages/LandingPages/AboutUs/sections/Team";
-import Featuring from "pages/LandingPages/AboutUs/sections/Featuring";
+import Information from "pages/LandingPages/Main/sections/Information";
+import Team from "pages/LandingPages/Main/sections/Team";
+import Featuring from "pages/LandingPages/Main/sections/Featuring";
 import routes from "routes";
 import footerRoutes from "footer.routes";
 import bgImage from "assets/images/bg-main.jpeg";
@@ -57,7 +57,11 @@ function AboutUs() {
             <MKTypography variant="body1" color="white" opacity={0.8} mt={1} mb={3}>
               향과 사람이 머무는 곳에서 당신을 기다리고 있습니다
             </MKTypography>
-            <MKButton color="default" sx={{ color: ({ palette: { dark } }) => dark.main }}>
+            <MKButton
+              color="default"
+              sx={{ color: ({ palette: { dark } }) => dark.main }}
+              href="/register"
+            >
               create account
             </MKButton>
             <MKTypography variant="h6" color="white" mt={8} mb={1}>

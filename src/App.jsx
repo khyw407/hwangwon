@@ -3,7 +3,7 @@ import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import theme from "assets/theme";
-import Main from "pages/LandingPages/AboutUs";
+import Main from "pages/LandingPages/Main";
 import routes from "routes";
 
 export default function App() {
