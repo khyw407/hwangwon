@@ -1,9 +1,12 @@
 {
   "files": {
-    "main.js": "/hwangwon/static/js/main.bc50ae2d.js",
+    "main.js": "/hwangwon/static/js/main.3c63fb35.js",
     "static/media/bg-main.jpeg": "/hwangwon/static/media/bg-main.1770429afe6f56fa5a24.jpeg",
     "static/media/logo.jpeg": "/hwangwon/static/media/logo.aa8a813fd050e245140b.jpeg",
     "static/media/bg-contact.jpeg": "/hwangwon/static/media/bg-contact.0c74a03908cc20fde1d6.jpeg",
+    "static/media/bg-menu.jpeg": "/hwangwon/static/media/bg-menu.a7f1b199c87176e1cb8a.jpeg",
+    "static/media/menu1.jpeg": "/hwangwon/static/media/menu1.4af6c43043577567e57b.jpeg",
+    "static/media/bg-profile.jpeg": "/hwangwon/static/media/bg-profile.15ca0423a4956112969d.jpeg",
     "static/media/bg-signin.jpeg": "/hwangwon/static/media/bg-signin.3059a50ce46a5dbc2147.jpeg",
     "static/media/bg-main-info.jpeg": "/hwangwon/static/media/bg-main-info.d4abe9fc870018593cbd.jpeg",
     "static/media/bruce-mars.jpg": "/hwangwon/static/media/bruce-mars.8a606c4a6dab54c9ceff.jpg",
@@ -11,9 +14,9 @@
     "static/media/ivana-square.jpg": "/hwangwon/static/media/ivana-square.f7bc23b269d1d2509c82.jpg",
     "static/media/ivana-squares.jpg": "/hwangwon/static/media/ivana-squares.3c555b856b04c2ab921b.jpg",
     "index.html": "/hwangwon/index.html",
-    "main.bc50ae2d.js.map": "/hwangwon/static/js/main.bc50ae2d.js.map"
+    "main.3c63fb35.js.map": "/hwangwon/static/js/main.3c63fb35.js.map"
   },
   "entrypoints": [
-    "static/js/main.bc50ae2d.js"
+    "static/js/main.3c63fb35.js"
   ]
 }
