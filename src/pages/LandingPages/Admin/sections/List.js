@@ -5,14 +5,37 @@ import MKTypography from "components/MKTypography";
 import { DataGrid } from "@mui/x-data-grid";
 
 const rows = [
-  { id: 1, title: "Hello", image: "", description: "World" },
-  { id: 2, title: "DataGridPro", image: "", description: "is Awasdfasdfasasffesome" },
-  { id: 3, title: "MUI", image: "", description: "is Amazing" },
+  {
+    id: 1,
+    title: "Hello",
+    image:
+      "https://image.shutterstock.com/image-photo/small-juicy-hamburger-canapes-on-260nw-570368917.jpg",
+    description: "World",
+  },
+  {
+    id: 2,
+    title: "DataGridPro",
+    image:
+      "https://image.shutterstock.com/image-photo/small-juicy-hamburger-canapes-on-260nw-570368917.jpg",
+    description: "is Awasdfasdfasasffesome",
+  },
+  {
+    id: 3,
+    title: "MUI",
+    image:
+      "https://image.shutterstock.com/image-photo/small-juicy-hamburger-canapes-on-260nw-570368917.jpg",
+    description: "is Amazing",
+  },
 ];
 
 const columns = [
   { field: "title", headerName: "메뉴명", width: 150 },
-  { field: "image", headerName: "이미지", width: 150 },
+  {
+    field: "image",
+    headerName: "이미지",
+    width: 150,
+    renderCell: (params) => <img width={50} height={50} alt="no images" src={params.value} />,
+  },
   { field: "description", headerName: "메뉴설명", width: 150 },
 ];
 

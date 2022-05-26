@@ -4,7 +4,6 @@ import MKBox from "components/MKBox";
 import MKInput from "components/MKInput";
 import MKButton from "components/MKButton";
 import MKTypography from "components/MKTypography";
-import bgImage from "assets/images/bg2.jpg";
 
 function Edit() {
   return (
@@ -20,24 +19,7 @@ function Edit() {
             sx={{ overflow: "hidden" }}
           >
             <Grid container spacing={2}>
-              <Grid
-                item
-                xs={12}
-                lg={5}
-                position="relative"
-                px={0}
-                sx={{
-                  backgroundImage: ({
-                    palette: { gradients },
-                    functions: { rgba, linearGradient },
-                  }) =>
-                    `${linearGradient(
-                      rgba(gradients.dark.main, 0.8),
-                      rgba(gradients.dark.state, 0.8)
-                    )}, url(${bgImage})`,
-                  backgroundSize: "cover",
-                }}
-              >
+              <Grid item xs={12} lg={5} position="relative" px={0}>
                 <MKBox
                   display="flex"
                   justifyContent="center"
@@ -46,57 +28,10 @@ function Edit() {
                   height="100%"
                 >
                   <MKBox py={6} pr={6} pl={{ xs: 6, sm: 12 }} my="auto">
-                    <MKTypography variant="h3" color="white" mb={1}>
-                      Contact Information
+                    <MKTypography variant="h3" color="black" mb={1}>
+                      메뉴 이미지 업로드
                     </MKTypography>
-                    <MKTypography variant="body2" color="white" opacity={0.8} mb={3}>
-                      Fill up the form and our Team will get back to you within 24 hours.
-                    </MKTypography>
-                    <MKBox display="flex" p={1}>
-                      <MKTypography variant="button" color="white">
-                        <i className="fas fa-phone" />
-                      </MKTypography>
-                      <MKTypography
-                        component="span"
-                        variant="button"
-                        color="white"
-                        opacity={0.8}
-                        ml={2}
-                        fontWeight="regular"
-                      >
-                        (+40) 772 100 200
-                      </MKTypography>
-                    </MKBox>
-                    <MKBox display="flex" color="white" p={1}>
-                      <MKTypography variant="button" color="white">
-                        <i className="fas fa-envelope" />
-                      </MKTypography>
-                      <MKTypography
-                        component="span"
-                        variant="button"
-                        color="white"
-                        opacity={0.8}
-                        ml={2}
-                        fontWeight="regular"
-                      >
-                        hello@creative-tim.com
-                      </MKTypography>
-                    </MKBox>
-                    <MKBox display="flex" color="white" p={1}>
-                      <MKTypography variant="button" color="white">
-                        <i className="fas fa-map-marker-alt" />
-                      </MKTypography>
-                      <MKTypography
-                        component="span"
-                        variant="button"
-                        color="white"
-                        opacity={0.8}
-                        ml={2}
-                        fontWeight="regular"
-                      >
-                        Dyonisie Wolf Bucharest, RO 010458
-                      </MKTypography>
-                    </MKBox>
+                    <MKInput type="file" />
                   </MKBox>
                 </MKBox>
               </Grid>
