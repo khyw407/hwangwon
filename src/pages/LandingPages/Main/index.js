@@ -13,7 +13,7 @@ import routes from "routes";
 import footerRoutes from "footer.routes";
 import bgImage from "assets/images/bg-main.jpeg";
 
-function AboutUs() {
+function Main() {
   return (
     <>
       <DefaultNavbar routes={routes} transparent light />
@@ -119,4 +119,4 @@ function AboutUs() {
   );
 }
 
-export default AboutUs;
+export default Main;
