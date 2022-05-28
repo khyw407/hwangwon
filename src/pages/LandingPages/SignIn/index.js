@@ -23,9 +23,7 @@ function SignInBasic() {
   const navigate = useNavigate();
 
   const onSocialClick = async (event) => {
-    const {
-      target: { name },
-    } = event;
+    const { name } = event;
     let provider;
 
     if (name === "google") {
@@ -102,15 +100,19 @@ function SignInBasic() {
                 </MKTypography>
                 <Grid container spacing={3} justifyContent="center" sx={{ mt: 1, mb: 2 }}>
                   <Grid item xs={2}>
-                    <MKTypography component={MuiLink} href="#" variant="body1" color="white">
+                    <MKTypography
+                      component={MuiLink}
+                      onClick={(event) => onSocialClick({ ...event, name: "facebook" })}
+                      variant="body1"
+                      color="white"
+                    >
                       <FacebookIcon color="inherit" />
                     </MKTypography>
                   </Grid>
                   <Grid item xs={2}>
                     <MKTypography
-                      onClick={onSocialClick}
+                      onClick={(event) => onSocialClick({ ...event, name: "google" })}
                       component={MuiLink}
-                      href="#"
                       variant="body1"
                       color="white"
                     >
@@ -118,7 +120,12 @@ function SignInBasic() {
                     </MKTypography>
                   </Grid>
                   <Grid item xs={2}>
-                    <MKTypography component={MuiLink} href="#" variant="body1" color="white">
+                    <MKTypography
+                      component={MuiLink}
+                      onClick={(event) => onSocialClick({ ...event, name: "twitter" })}
+                      variant="body1"
+                      color="white"
+                    >
                       <TwitterIcon color="inherit" />
                     </MKTypography>
                   </Grid>

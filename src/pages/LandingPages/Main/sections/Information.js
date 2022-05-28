@@ -57,7 +57,7 @@ function Information() {
               description="진하게 로스팅된 원두의 맛과 좋은 재료만을 사용한 베이커리 메뉴를 만나보세요."
               action={{
                 type: "internal",
-                route: "pages/company/about-us",
+                route: "/menu",
                 color: "info",
                 label: "click",
               }}
