@@ -3,9 +3,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import MKTypography from "components/MKTypography";
-import logoCT from "assets/images/logo-ct-dark.png";
-
-const date = new Date().getFullYear();
+import logoCT from "assets/images/main-logo/logo.jpeg";
 
 export default {
   brand: {
@@ -34,10 +32,7 @@ export default {
   menus: [
     {
       name: "company",
-      items: [
-        { name: "about us", href: "https://www.creative-tim.com/presentation" },
-        { name: "blog", href: "https://section.blog.naver.com" },
-      ],
+      items: [{ name: "blog", href: "https://section.blog.naver.com" }],
     },
     {
       name: "legal",
@@ -48,7 +43,7 @@ export default {
     },
     {
       name: "help & support",
-      items: [{ name: "contact us", href: "https://www.naver.com/" }],
+      items: [{ name: "contact us", href: "/contact" }],
     },
     {
       name: "map",
@@ -62,7 +57,7 @@ export default {
   ],
   copyright: (
     <MKTypography variant="button" fontWeight="regular">
-      All rights reserved. Copyright &copy; {date}{" "}
+      All rights reserved. Copyright &copy; 2022{" "}
       <MKTypography
         component="a"
         href="https://www.creative-tim.com"
