@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Card from "@mui/material/Card";
 import Grid from "@mui/material/Grid";
 import MuiLink from "@mui/material/Link";
@@ -20,6 +20,7 @@ function SignInBasic() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   const onSocialClick = async (event) => {
     const {
@@ -32,6 +33,7 @@ function SignInBasic() {
     }
 
     await authService.signInWithPopup(provider);
+    navigate("/");
   };
 
   const onChange = (event) => {
@@ -47,8 +49,10 @@ function SignInBasic() {
 
   const onSubmit = async (event) => {
     event.preventDefault();
+
     try {
       await authService.signInWithEmailAndPassword(email, password);
+      navigate("/");
     } catch (err) {
       setError(err.message);
     }
