@@ -7,169 +7,41 @@ import Admin from "pages/LandingPages/Admin";
 
 const routes = [
   {
-    name: "sections",
+    name: "메뉴",
     icon: <Icon>view_day</Icon>,
     collapse: [
       {
-        name: "page sections",
-        description: "See all sections",
+        name: "로그인",
+        description: "계정 로그인 & 가입",
         dropdown: true,
-        /*
         collapse: [
           {
-            name: "page headers",
-            route: "/sections/page-sections/page-headers",
-            component: <PageHeaders />,
+            name: "Sign in",
+            route: "/login",
+            component: <SignIn />,
           },
           {
-            name: "features",
-            route: "/sections/page-sections/features",
-            component: <Features />,
+            name: "Sign up",
+            route: "/register",
+            component: <SignUp />,
           },
         ],
-        */
       },
       {
-        name: "navigation",
-        description: "See all navigations",
-        dropdown: true,
-        /*
-        collapse: [
-          {
-            name: "navbars",
-            route: "/sections/navigation/navbars",
-            component: <Navbars />,
-          },
-          {
-            name: "nav tabs",
-            route: "/sections/navigation/nav-tabs",
-            component: <NavTabs />,
-          },
-          {
-            name: "pagination",
-            route: "/sections/navigation/pagination",
-            component: <Pagination />,
-          },
-        ],
-        */
+        name: "Contact us",
+        description: "문의 & 연락처",
+        dropdown: false,
+        route: "/contact",
+        component: <Contact />,
       },
       {
-        name: "input areas",
-        description: "See all input areas",
-        dropdown: true,
-        /*
-        collapse: [
-          {
-            name: "inputs",
-            route: "/sections/input-areas/inputs",
-            component: <Inputs />,
-          },
-          {
-            name: "forms",
-            route: "/sections/input-areas/forms",
-            component: <Forms />,
-          },
-        ],
-        */
-      },
-      {
-        name: "attention catchers",
-        description: "See all components",
-        dropdown: true,
-        /*
-        collapse: [
-          {
-            name: "alerts",
-            route: "/sections/attention-catchers/alerts",
-            component: <Alerts />,
-          },
-          {
-            name: "modals",
-            route: "/sections/attention-catchers/modals",
-            component: <Modals />,
-          },
-          {
-            name: "tooltips & popovers",
-            route: "/sections/attention-catchers/tooltips-popovers",
-            component: <TooltipsPopovers />,
-          },
-        ],
-        */
-      },
-      {
-        name: "elements",
-        description: "See all 32 components",
-        dropdown: true,
-        /*
-        collapse: [
-          {
-            name: "avatars",
-            route: "/sections/elements/avatars",
-            component: <Avatars />,
-          },
-          {
-            name: "badges",
-            route: "/sections/elements/badges",
-            component: <Badges />,
-          },
-          {
-            name: "breadcrumbs",
-            route: "/sections/elements/breadcrumbs",
-            component: <BreadcrumbsEl />,
-          },
-          {
-            name: "buttons",
-            route: "/sections/elements/buttons",
-            component: <Buttons />,
-          },
-          {
-            name: "dropdowns",
-            route: "/sections/elements/dropdowns",
-            component: <Dropdowns />,
-          },
-          {
-            name: "progress bars",
-            route: "/sections/elements/progress-bars",
-            component: <ProgressBars />,
-          },
-          {
-            name: "toggles",
-            route: "/sections/elements/toggles",
-            component: <Toggles />,
-          },
-          {
-            name: "typography",
-            route: "/sections/elements/typography",
-            component: <Typography />,
-          },
-        ],
-        */
+        name: "Menu",
+        description: "향원에서 제공하는 다양한 메뉴",
+        dropdown: false,
+        route: "/menu",
+        component: <Menu />,
       },
     ],
-  },
-  {
-    name: "Login",
-    icon: <Icon>login</Icon>,
-    route: "/login",
-    component: <SignIn />,
-  },
-  {
-    name: "Sign up",
-    icon: <Icon>login</Icon>,
-    route: "/register",
-    component: <SignUp />,
-  },
-  {
-    name: "Contact us",
-    icon: <Icon>login</Icon>,
-    route: "/contact",
-    component: <Contact />,
-  },
-  {
-    name: "menu",
-    icon: <Icon>login</Icon>,
-    route: "/menu",
-    component: <Menu />,
   },
   {
     name: "admin",
