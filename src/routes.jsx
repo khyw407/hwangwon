@@ -1,9 +1,12 @@
+/* eslint-disable react/prop-types */
 import Icon from "@mui/material/Icon";
 import SignIn from "pages/LandingPages/SignIn";
 import SignUp from "pages/LandingPages/SignUp";
 import Contact from "pages/LandingPages/ContactUs";
 import Menu from "pages/LandingPages/Menu";
 import Admin from "pages/LandingPages/Admin";
+import { Routes, Route, Navigate } from "react-router-dom";
+import Main from "pages/LandingPages/Main";
 
 const routes = [
   {
@@ -50,5 +53,29 @@ const routes = [
     component: <Admin />,
   },
 ];
+
+const getRoutes = (allRoutes) =>
+  allRoutes.map((route) => {
+    if (route.collapse) {
+      return getRoutes(route.collapse);
+    }
+
+    if (route.route) {
+      return <Route exact path={route.route} element={route.component} key={route.key} />;
+    }
+
+    return null;
+  });
+
+export function AppRouter({ isLoggedIn, userObj }) {
+  return (
+    <Routes>
+      {isLoggedIn ? "" : ""}
+      {getRoutes(routes)}
+      <Route path="/main" element={<Main userObj={userObj} />} />
+      <Route path="*" element={<Navigate to="/main" />} />
+    </Routes>
+  );
+}
 
 export default routes;

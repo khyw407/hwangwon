@@ -1,40 +1,38 @@
-import { useEffect } from "react";
-import { Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import theme from "assets/theme";
-import Main from "pages/LandingPages/Main";
-import routes from "routes";
+import { AppRouter } from "routes";
+import { authService } from "./firebase";
 
 export default function App() {
+  const [init, setInit] = useState(false);
+  const [userObj, setUserObj] = useState(null);
   const { pathname } = useLocation();
 
   useEffect(() => {
     document.documentElement.scrollTop = 0;
     document.scrollingElement.scrollTop = 0;
-  }, [pathname]);
 
-  const getRoutes = (allRoutes) =>
-    allRoutes.map((route) => {
-      if (route.collapse) {
-        return getRoutes(route.collapse);
+    authService.onAuthStateChanged((user) => {
+      if (user) {
+        setUserObj({
+          uid: user.uid,
+          displayName: user.displayName,
+          updateProfile: (args) => user.updateProfile(args),
+        });
+      } else {
+        setUserObj(false);
       }
-
-      if (route.route) {
-        return <Route exact path={route.route} element={route.component} key={route.key} />;
-      }
-
-      return null;
+      setInit(true);
     });
+  }, [pathname]);
 
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Routes>
-        {getRoutes(routes)}
-        <Route path="/main" element={<Main />} />
-        <Route path="*" element={<Navigate to="/main" />} />
-      </Routes>
+      {init && <AppRouter isLoggedIn={Boolean(userObj)} userObj={userObj} />}
     </ThemeProvider>
   );
 }

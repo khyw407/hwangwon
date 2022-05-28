@@ -1,4 +1,7 @@
 import firebase from "firebase/compat/app";
+import "firebase/compat/auth";
+import "firebase/compat/firestore";
+import "firebase/compat/storage";
 import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
@@ -11,7 +14,6 @@ const firebaseConfig = {
   measurementId: process.env.REACT_APP_MEASUREMENT_ID,
 };
 
-// Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
 export const firebaseInstance = firebase;

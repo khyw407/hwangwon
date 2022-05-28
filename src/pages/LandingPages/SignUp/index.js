@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import Card from "@mui/material/Card";
 import Grid from "@mui/material/Grid";
 import MKBox from "components/MKBox";
@@ -9,8 +10,37 @@ import DefaultNavbar from "components/Navbars/DefaultNavbar";
 import SimpleFooter from "components/Footers/SimpleFooter";
 import routes from "routes";
 import bgImage from "assets/images/bg-signin.jpeg";
+import { authService } from "../../../firebase";
 
 function SignUp() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
+
+  const onChange = (event) => {
+    const {
+      target: { name, value },
+    } = event;
+
+    if (name === "email") {
+      setEmail(value);
+    } else if (name === "password") {
+      setPassword(value);
+    }
+  };
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+
+    try {
+      await authService.createUserWithEmailAndPassword(email, password);
+      navigate("/login");
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
   return (
     <>
       <DefaultNavbar routes={routes} transparent light />
@@ -55,18 +85,35 @@ function SignUp() {
                 </MKTypography>
               </MKBox>
               <MKBox pt={4} pb={3} px={3}>
-                <MKBox component="form" role="form">
+                <MKBox component="form" role="form" onSubmit={onSubmit}>
                   <MKBox mb={2}>
-                    <MKInput type="email" label="Email" fullWidth />
+                    <MKInput
+                      name="email"
+                      type="email"
+                      label="Email"
+                      fullWidth
+                      required
+                      value={email}
+                      onChange={onChange}
+                    />
                   </MKBox>
                   <MKBox mb={2}>
-                    <MKInput type="password" label="Password" fullWidth />
+                    <MKInput
+                      name="password"
+                      type="password"
+                      label="Password"
+                      fullWidth
+                      required
+                      value={password}
+                      onChange={onChange}
+                    />
                   </MKBox>
                   <MKBox mt={4} mb={1}>
-                    <MKButton variant="gradient" color="info" fullWidth>
+                    <MKButton variant="gradient" color="info" fullWidth type="submit">
                       sign up
                     </MKButton>
                   </MKBox>
+                  {error}
                   <MKBox mt={3} mb={1} textAlign="center">
                     <MKTypography variant="button" color="text">
                       Already have an account?{" "}
