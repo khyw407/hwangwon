@@ -69,8 +69,8 @@ function SimpleFooter({ links, light }) {
 
 SimpleFooter.defaultProps = {
   links: [
-    { href: "https://www.naver.com/", name: "Home" },
-    { href: "https://www.naver.com/", name: "About Us" },
+    { href: "/", name: "Home" },
+    { href: "/contact", name: "About Us" },
     { href: "https://www.naver.com", name: "Blog" },
     { href: "https://www.naver.com", name: "License" },
   ],
