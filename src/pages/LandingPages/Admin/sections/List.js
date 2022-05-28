@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import MKBox from "components/MKBox";
@@ -39,7 +40,9 @@ const columns = [
   { field: "description", headerName: "메뉴설명", width: 150 },
 ];
 
-function List() {
+function List({ userObj }) {
+  console.log(userObj);
+
   return (
     <MKBox component="section" py={{ xs: 6, sm: 12 }}>
       <Container>

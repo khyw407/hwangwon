@@ -22,11 +22,13 @@ const routes = [
             name: "Sign in",
             route: "/login",
             component: <SignIn />,
+            key: "login",
           },
           {
             name: "Sign up",
             route: "/register",
             component: <SignUp />,
+            key: "register",
           },
         ],
       },
@@ -36,6 +38,7 @@ const routes = [
         dropdown: false,
         route: "/contact",
         component: <Contact />,
+        key: "contact",
       },
       {
         name: "Menu",
@@ -43,14 +46,9 @@ const routes = [
         dropdown: false,
         route: "/menu",
         component: <Menu />,
+        key: "menu",
       },
     ],
-  },
-  {
-    name: "admin",
-    icon: <Icon>login</Icon>,
-    route: "/admin",
-    component: <Admin />,
   },
 ];
 
@@ -70,9 +68,14 @@ const getRoutes = (allRoutes) =>
 export function AppRouter({ isLoggedIn, userObj }) {
   return (
     <Routes>
-      {isLoggedIn ? "" : ""}
       {getRoutes(routes)}
-      <Route path="/main" element={<Main userObj={userObj} />} />
+      <Route exact path="/main" element={<Main userObj={userObj} />} key="main" />
+      <Route
+        exact
+        path="/admin"
+        element={<Admin isLoggedIn={isLoggedIn} userObj={userObj} />}
+        key="admin"
+      />
       <Route path="*" element={<Navigate to="/main" />} />
     </Routes>
   );

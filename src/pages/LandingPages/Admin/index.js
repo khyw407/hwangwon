@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import Card from "@mui/material/Card";
 import MKBox from "components/MKBox";
 import DefaultNavbar from "components/Navbars/DefaultNavbar";
@@ -7,7 +8,11 @@ import List from "pages/LandingPages/Admin/sections/List";
 import routes from "routes";
 import bgImage from "assets/images/bg-menu.jpeg";
 
-function Admin() {
+function Admin({ isLoggedIn, userObj }) {
+  // admin 권한을 확인해서 admin만 렌더링되게 해야됨
+  console.log(isLoggedIn);
+  console.log(userObj);
+
   return (
     <>
       <DefaultNavbar routes={routes} transparent light />
@@ -38,8 +43,8 @@ function Admin() {
             boxShadow: ({ boxShadows: { xxl } }) => xxl,
           }}
         >
-          <List />
-          <Edit />
+          <List userObj={userObj} />
+          <Edit userObj={userObj} />
         </Card>
       </MKBox>
       <MKBox width="100%" position="absolute">
