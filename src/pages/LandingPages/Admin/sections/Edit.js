@@ -1,19 +1,26 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-extra-boolean-cast */
-import { useState } from "react";
+import { useState, forwardRef } from "react";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import MKBox from "components/MKBox";
 import MKInput from "components/MKInput";
 import MKButton from "components/MKButton";
 import MKTypography from "components/MKTypography";
+import Snackbar from "@mui/material/Snackbar";
+import MuiAlert from "@mui/material/Alert";
 import { v4 as uuidv4 } from "uuid";
 import { dbService, storageServie } from "../../../../firebase";
+
+const Alert = forwardRef((props, ref) => (
+  <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />
+));
 
 function Edit({ userObj }) {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [attachment, setAttachment] = useState("");
+  const [messageOpen, setMessageOpen] = useState(false);
 
   const onSubmit = async (event) => {
     event.preventDefault();
@@ -36,6 +43,7 @@ function Edit({ userObj }) {
     setDescription("");
     setTitle("");
     setAttachment("");
+    setMessageOpen(true);
   };
 
   const onChange = (event) => {
@@ -73,6 +81,13 @@ function Edit({ userObj }) {
     setAttachment("");
     setTitle("");
     setDescription("");
+  };
+
+  const onHandleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setMessageOpen(false);
   };
 
   return (
@@ -194,6 +209,11 @@ function Edit({ userObj }) {
             </Grid>
           </MKBox>
         </Grid>
+        <Snackbar open={messageOpen} autoHideDuration={2000} onClose={onHandleClose}>
+          <Alert onClose={onHandleClose} severity="success" sx={{ width: "100%" }}>
+            저장이 완료되었습니다.
+          </Alert>
+        </Snackbar>
       </Container>
     </MKBox>
   );

@@ -1,47 +1,36 @@
 /* eslint-disable react/prop-types */
+import { useState, useEffect } from "react";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 import { DataGrid } from "@mui/x-data-grid";
-
-const rows = [
-  {
-    id: 1,
-    title: "Hello",
-    image:
-      "https://image.shutterstock.com/image-photo/small-juicy-hamburger-canapes-on-260nw-570368917.jpg",
-    description: "World",
-  },
-  {
-    id: 2,
-    title: "DataGridPro",
-    image:
-      "https://image.shutterstock.com/image-photo/small-juicy-hamburger-canapes-on-260nw-570368917.jpg",
-    description: "is Awasdfasdfasasffesome",
-  },
-  {
-    id: 3,
-    title: "MUI",
-    image:
-      "https://image.shutterstock.com/image-photo/small-juicy-hamburger-canapes-on-260nw-570368917.jpg",
-    description: "is Amazing",
-  },
-];
+import { dbService } from "../../../../firebase";
 
 const columns = [
   { field: "title", headerName: "메뉴명", width: 150 },
   {
-    field: "image",
+    field: "attachmentUrl",
     headerName: "이미지",
     width: 150,
     renderCell: (params) => <img width={50} height={50} alt="no images" src={params.value} />,
   },
-  { field: "description", headerName: "메뉴설명", width: 150 },
+  { field: "description", headerName: "메뉴설명", width: 600 },
 ];
 
 function List({ userObj }) {
   console.log(userObj);
+  const [menu, setMenu] = useState([]);
+
+  useEffect(() => {
+    dbService.collection("menu").onSnapshot((snapshot) => {
+      const newArray = snapshot.docs.map((document) => ({
+        id: document.id,
+        ...document.data(),
+      }));
+      setMenu(newArray);
+    });
+  }, []);
 
   return (
     <MKBox component="section" py={{ xs: 6, sm: 12 }}>
@@ -54,7 +43,7 @@ function List({ userObj }) {
               </MKTypography>
               <MKBox display="flex" justifyContent="space-between" alignItems="center" mb={1}>
                 <div style={{ height: 300, width: "100%" }}>
-                  <DataGrid rows={rows} columns={columns} />
+                  <DataGrid rows={menu} columns={columns} />
                 </div>
               </MKBox>
             </Grid>
