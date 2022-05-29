@@ -48,6 +48,14 @@ const routes = [
         component: <Menu />,
         key: "menu",
       },
+      {
+        name: "Admin",
+        description: "관리자 페이지",
+        dropdown: false,
+        route: "/admin",
+        component: <Admin />,
+        key: "admin",
+      },
     ],
   },
 ];
