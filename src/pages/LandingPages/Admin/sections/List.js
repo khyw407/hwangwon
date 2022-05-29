@@ -42,7 +42,7 @@ function List({ userObj }) {
                 메뉴리스트
               </MKTypography>
               <MKBox display="flex" justifyContent="space-between" alignItems="center" mb={1}>
-                <div style={{ height: 300, width: "100%" }}>
+                <div style={{ height: 350, width: "100%" }}>
                   <DataGrid rows={menu} columns={columns} />
                 </div>
               </MKBox>
