@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/hwangwon/static/js/main.cedf6b33.js",
+    "main.js": "/hwangwon/static/js/main.7dee6c88.js",
     "static/media/bg-main.jpeg": "/hwangwon/static/media/bg-main.1770429afe6f56fa5a24.jpeg",
     "static/media/logo.jpeg": "/hwangwon/static/media/logo.aa8a813fd050e245140b.jpeg",
     "static/media/bg-contact.jpeg": "/hwangwon/static/media/bg-contact.0c74a03908cc20fde1d6.jpeg",
@@ -14,9 +14,9 @@
     "static/media/ivana-square.jpg": "/hwangwon/static/media/ivana-square.f7bc23b269d1d2509c82.jpg",
     "static/media/ivana-squares.jpg": "/hwangwon/static/media/ivana-squares.3c555b856b04c2ab921b.jpg",
     "index.html": "/hwangwon/index.html",
-    "main.cedf6b33.js.map": "/hwangwon/static/js/main.cedf6b33.js.map"
+    "main.7dee6c88.js.map": "/hwangwon/static/js/main.7dee6c88.js.map"
   },
   "entrypoints": [
-    "static/js/main.cedf6b33.js"
+    "static/js/main.7dee6c88.js"
   ]
 }
