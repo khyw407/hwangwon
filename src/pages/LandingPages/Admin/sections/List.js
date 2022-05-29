@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import { useState, useEffect } from "react";
 import Container from "@mui/material/Container";
@@ -19,7 +20,6 @@ const columns = [
 ];
 
 function List({ userObj }) {
-  console.log(userObj);
   const [menu, setMenu] = useState([]);
 
   useEffect(() => {

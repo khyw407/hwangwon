@@ -13,23 +13,9 @@ function SimpleBlogCard({ image, title, description }) {
         borderRadius="lg"
         shadow="md"
         width="100%"
+        height="250px"
         position="relative"
         zIndex={1}
-      />
-      <MKBox
-        borderRadius="lg"
-        shadow="md"
-        width="100%"
-        height="100%"
-        position="absolute"
-        left={0}
-        top={0}
-        sx={{
-          backgroundImage: `url(${image})`,
-          transform: "scale(0.94)",
-          filter: "blur(12px)",
-          backgroundSize: "cover",
-        }}
       />
     </MKBox>
   );

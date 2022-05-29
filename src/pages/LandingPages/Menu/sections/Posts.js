@@ -1,11 +1,25 @@
+/* eslint-disable no-plusplus */
+import { useState, useEffect } from "react";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 import SimpleBlogCard from "components/Cards/BlogCards/SimpleBlogCard";
-import post1 from "assets/images/menu/menu1.jpeg";
+import { dbService } from "../../../../firebase";
 
-function Places() {
+function Menu() {
+  const [menu, setMenu] = useState([]);
+
+  useEffect(() => {
+    dbService.collection("menu").onSnapshot((snapshot) => {
+      const newArray = snapshot.docs.map((document) => ({
+        id: document.id,
+        ...document.data(),
+      }));
+      setMenu(newArray);
+    });
+  }, []);
+
   return (
     <MKBox component="section" py={2}>
       <Container>
@@ -15,68 +29,15 @@ function Places() {
           </MKTypography>
         </Grid>
         <Grid container spacing={3}>
-          <Grid item xs={12} sm={6} lg={3}>
-            <SimpleBlogCard
-              image={post1}
-              title="Coffee Test"
-              description="testsetststafasdfasdfasdfasfasfasfasfasfasfasasfd"
-            />
-          </Grid>
-          <Grid item xs={12} sm={6} lg={3}>
-            <SimpleBlogCard
-              image={post1}
-              title="Coffee Test"
-              description="testsetststafasdfasdfasdfasfasfasfasfasfasfasasfd"
-            />
-          </Grid>
-          <Grid item xs={12} sm={6} lg={3}>
-            <SimpleBlogCard
-              image={post1}
-              title="Coffee Test"
-              description="testsetststafasdfasdfasdfasfasfasfasfasfasfasasfd"
-            />
-          </Grid>
-          <Grid item xs={12} sm={6} lg={3}>
-            <SimpleBlogCard
-              image={post1}
-              title="Coffee Test"
-              description="testsetststafasdfasdfasdfasfasfasfasfasfasfasasfd"
-            />
-          </Grid>
-        </Grid>
-        <Grid container spacing={3}>
-          <Grid item xs={12} sm={6} lg={3}>
-            <SimpleBlogCard
-              image={post1}
-              title="Coffee Test"
-              description="testsetststafasdfasdfasdfasfasfasfasfasfasfasasfd"
-            />
-          </Grid>
-          <Grid item xs={12} sm={6} lg={3}>
-            <SimpleBlogCard
-              image={post1}
-              title="Coffee Test"
-              description="testsetststafasdfasdfasdfasfasfasfasfasfasfasasfd"
-            />
-          </Grid>
-          <Grid item xs={12} sm={6} lg={3}>
-            <SimpleBlogCard
-              image={post1}
-              title="Coffee Test"
-              description="testsetststafasdfasdfasdfasfasfasfasfasfasfasasfd"
-            />
-          </Grid>
-          <Grid item xs={12} sm={6} lg={3}>
-            <SimpleBlogCard
-              image={post1}
-              title="Coffee Test"
-              description="testsetststafasdfasdfasdfasfasfasfasfasfasfasasfd"
-            />
-          </Grid>
+          {menu.map(({ title, description, attachmentUrl }) => (
+            <Grid item xs={12} sm={6} lg={3}>
+              <SimpleBlogCard image={attachmentUrl} title={title} description={description} />
+            </Grid>
+          ))}
         </Grid>
       </Container>
     </MKBox>
   );
 }
 
-export default Places;
+export default Menu;
