@@ -43,22 +43,6 @@ SimpleBlogCard.propTypes = {
   image: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  action: PropTypes.shape({
-    type: PropTypes.oneOf(["external", "internal"]),
-    label: PropTypes.string.isRequired,
-    color: PropTypes.oneOf([
-      "inherit",
-      "primary",
-      "secondary",
-      "info",
-      "success",
-      "warning",
-      "error",
-      "light",
-      "dark",
-      "text",
-    ]).isRequired,
-  }).isRequired,
 };
 
 export default SimpleBlogCard;

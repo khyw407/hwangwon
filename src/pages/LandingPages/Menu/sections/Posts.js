@@ -29,8 +29,8 @@ function Menu() {
           </MKTypography>
         </Grid>
         <Grid container spacing={3}>
-          {menu.map(({ title, description, attachmentUrl }) => (
-            <Grid item xs={12} sm={6} lg={3}>
+          {menu.map(({ id, title, description, attachmentUrl }) => (
+            <Grid key={id} item xs={12} sm={6} lg={3}>
               <SimpleBlogCard image={attachmentUrl} title={title} description={description} />
             </Grid>
           ))}
