@@ -69,7 +69,7 @@ export function AppRouter({ isLoggedIn, userObj, isAdmin }) {
   return (
     <Routes>
       {getRoutes(routes)}
-      <Route exact path="/main" element={<Main userObj={userObj} />} key="main" />
+      <Route exact path="/" element={<Main userObj={userObj} />} key="main" />
       {isAdmin ? (
         <Route
           exact
@@ -78,9 +78,9 @@ export function AppRouter({ isLoggedIn, userObj, isAdmin }) {
           key="admin"
         />
       ) : (
-        <Route element={<Navigate to="/main" />} />
+        <Route element={<Navigate to="/" />} />
       )}
-      <Route path="*" element={<Navigate to="/main" />} />
+      <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   );
 }
