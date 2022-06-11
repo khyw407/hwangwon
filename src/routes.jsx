@@ -48,14 +48,6 @@ const routes = [
         component: <Menu />,
         key: "menu",
       },
-      {
-        name: "Admin",
-        description: "관리자 페이지",
-        dropdown: false,
-        route: "/admin",
-        component: <Admin />,
-        key: "admin",
-      },
     ],
   },
 ];
@@ -73,17 +65,21 @@ const getRoutes = (allRoutes) =>
     return null;
   });
 
-export function AppRouter({ isLoggedIn, userObj }) {
+export function AppRouter({ isLoggedIn, userObj, isAdmin }) {
   return (
     <Routes>
       {getRoutes(routes)}
       <Route exact path="/main" element={<Main userObj={userObj} />} key="main" />
-      <Route
-        exact
-        path="/admin"
-        element={<Admin isLoggedIn={isLoggedIn} userObj={userObj} />}
-        key="admin"
-      />
+      {isAdmin ? (
+        <Route
+          exact
+          path="/admin"
+          element={<Admin isLoggedIn={isLoggedIn} userObj={userObj} />}
+          key="admin"
+        />
+      ) : (
+        <Route element={<Navigate to="/main" />} />
+      )}
       <Route path="*" element={<Navigate to="/main" />} />
     </Routes>
   );
