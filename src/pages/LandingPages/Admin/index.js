@@ -8,11 +8,7 @@ import List from "pages/LandingPages/Admin/sections/List";
 import routes from "routes";
 import bgImage from "assets/images/bg-menu.jpeg";
 
-function Admin({ isLoggedIn, userObj }) {
-  // admin 권한을 확인해서 admin만 렌더링되게 해야됨
-  console.log(isLoggedIn);
-  console.log(userObj);
-
+function Admin({ userObj }) {
   return (
     <>
       <DefaultNavbar routes={routes} transparent light />
