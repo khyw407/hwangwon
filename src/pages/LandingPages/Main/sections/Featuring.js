@@ -13,7 +13,7 @@ function Featuring() {
               count={1000}
               separator=","
               title="음료"
-              description="음료종료가 엄청 많아요"
+              description="음료종류가 엄청 많아요"
             />
           </Grid>
           <Grid item xs={12} md={3}>

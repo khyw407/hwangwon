@@ -7,7 +7,7 @@ import SimpleFooter from "components/Footers/SimpleFooter";
 import routes from "routes";
 import bgImage from "assets/images/bg-menu.jpeg";
 
-function Author() {
+function Menu() {
   return (
     <>
       <DefaultNavbar routes={routes} transparent light />
@@ -49,4 +49,4 @@ function Author() {
   );
 }
 
-export default Author;
+export default Menu;

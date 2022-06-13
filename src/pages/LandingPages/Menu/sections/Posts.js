@@ -7,7 +7,7 @@ import MKTypography from "components/MKTypography";
 import SimpleBlogCard from "components/Cards/BlogCards/SimpleBlogCard";
 import { dbService } from "../../../../firebase";
 
-function Menu() {
+function Post() {
   const [menu, setMenu] = useState([]);
 
   useEffect(() => {
@@ -40,4 +40,4 @@ function Menu() {
   );
 }
 
-export default Menu;
+export default Post;

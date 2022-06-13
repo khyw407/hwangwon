@@ -16,7 +16,7 @@ import routes from "routes";
 import bgImage from "assets/images/bg-signin.jpeg";
 import { authService, firebaseInstance } from "../../../firebase";
 
-function SignInBasic() {
+function SignIn() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -189,4 +189,4 @@ function SignInBasic() {
   );
 }
 
-export default SignInBasic;
+export default SignIn;
